@@ -1,0 +1,20 @@
+// 在 keys.json 文件里放入你的私钥
+
+var EOS = require('./eosClient.js');
+var eos = EOS();
+const util = require('util')
+
+function report_scan(devid, uid, time) {
+  (async () => {
+  const ret = await eos.getActions('sschaintest1',-1,-1)
+  var action_trace=util.inspect(ret.actions,false,6,true).indexOf("action_trace")
+  var block_time=util.inspect(ret.actions,false,6,true).indexOf("block_time")
+  var actmh=util.inspect(ret.actions,false,6,true).indexOf("act:")
+  var context_free=util.inspect(ret.actions,false,6,true).indexOf("context_free")
+  console.log("   ")
+  console.log(util.inspect(ret.actions,false,6,true).slice(block_time,action_trace))
+  console.log(util.inspect(ret.actions,false,6,true).slice(actmh,context_free-7))
+  })();
+}
+
+report_scan("sschaintest1", "sschaintest2", "1234");
