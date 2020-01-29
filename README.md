@@ -7,7 +7,7 @@
 
 1.首先安装nodejs和npm，在命令行下输入node -v 和npm -v ，可以显示正常版本号（我用的是nodejs，12版本，和npm，6版本）
 
-2.安装git
+2.安装serialport，git
 
 3.git clone https://github.com/duoduosys/eosjs-startup.git
 
