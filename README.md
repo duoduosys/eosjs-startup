@@ -1,9 +1,28 @@
-用于sensorschain的开发。
+简介：
+在原作者的eosjs-startup修改了若干内容，使得其可以用于sensorschain的开发。
 
 --------------------------------------------
-主要修改的内容如下：
-1.修改了rpc和私钥
-2.在eosjsstartup的基础上，增加了几个实用的代码程序。
+安装说明：（win10）
+1.首先安装nodejs和npm，在命令行下输入node -v 和npm -v ，可以显示正常版本号（我用的是nodejs，12版本，和npm，6版本）
+2.安装git
+3.git clone https://github.com/duoduosys/eosjs-startup.git
+4.在目录下安装eosjs，
+npm i eosjs
+5.测试。运行
+node microbitgetactions.js
+有正确显示即可。
+
+--------------------------------------------
+使用方法：
+配合microbit使用。
+1.microbitcom.js用于将microbit发出的信息传输到区块链上面
+2.microbitgetactions.js用于显示刚才发送的信息是否成功（上面显示的小时加8为北京时间）
+
+--------------------------------------------
+运行自己的账户需要修改的内容如下：
+1.按特别说明的4向我申请
+2.在keys.json里面修改第二个私钥
+将自己的私钥覆盖keys.json的第二个私钥.
 
 ---------------------------------------------
 特别说明：
@@ -14,32 +33,5 @@
 发需求给59974015@qq.com即可，我会发送一个有资源的账户，并连同公钥和私钥一并发给你。
 或者自建一对公钥私钥，然后发公钥给我，我会发一个基于该公钥的账户给你。
 
-
 ---------------------------------------------
-
-
-## eosjs Startup
-
-### 简介
-
-[eosjs Startup](https://github.com/dabdevelop/eosjs-startup) 整理了eosjs常用代码，包括创建、查询EOS账号，EOS转账，购买RAM，出售RAM，抵押资源，取消抵押资源，生成密钥对等。
-
-### 前提
-
-前提是安装了[eosjs](https://github.com/EOSIO/eosjs)：
-
-在此工程目录下，安装 `eosjs`
-
-```bash
-    npm i eosjs
-```
-
-### 使用方法
-
-首先，在 `keys.json` 中添加私钥。然后对相应程序的参数进行修改。
-
-js代码运行方式为：
-
-```bash
-    node query_account.js
-```
+1.0版 2020年1月29日，修改基本参数，修改说明文档，增加microbitcom.js，microbitgetactions.js
