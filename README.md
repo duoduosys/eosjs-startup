@@ -1,28 +1,46 @@
 简介：
+
 在原作者的eosjs-startup修改了若干内容，使得其可以用于sensorschain的开发。
 
 --------------------------------------------
 安装说明：（win10）
+
 1.首先安装nodejs和npm，在命令行下输入node -v 和npm -v ，可以显示正常版本号（我用的是nodejs，12版本，和npm，6版本）
+
 2.安装git
+
 3.git clone https://github.com/duoduosys/eosjs-startup.git
+
 4.在目录下安装eosjs，
+
 npm i eosjs
+
 5.测试。运行
+
 node microbitgetactions.js
+
 有正确显示即可。
+
 
 --------------------------------------------
 使用方法：
+
 配合microbit使用。
+
 1.microbitcom.js用于将microbit发出的信息传输到区块链上面
+
 2.microbitgetactions.js用于显示刚才发送的信息是否成功（上面显示的小时加8为北京时间）
+
 
 --------------------------------------------
 运行自己的账户需要修改的内容如下：
+
 1.按特别说明的4向我申请
+
 2.在keys.json里面修改第二个私钥
+
 将自己的私钥覆盖keys.json的第二个私钥.
+
 
 ---------------------------------------------
 特别说明：
